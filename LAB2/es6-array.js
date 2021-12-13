@@ -21,3 +21,55 @@ console.log(cars);
 
 const slideArr = cars.slice(0,2);
 console.log(slideArr);
+
+const conCatarr = cars.concat.apply(rname);
+console.log(conCatarr.toString());
+
+//spread operator
+const catarr = [...cars, ...rname];
+console.log(catarr);
+
+//iteration
+const keys = cars.keys();
+let Text = "";
+for(x of keys){
+    Text += x;
+}
+console.log(Text);
+
+cars.forEach(cat);
+function cat(value, index, array) {
+    Text += value;
+}
+console.log(Text);
+
+cars.map(addVal);
+function addVal (value) {
+    return value = "<br>";
+}
+
+const number = [10,20,30];
+const over10 = number.filter(over10fn);
+function over10fn(value) {
+    return value > 10;
+}
+console.log(over10);
+
+let sum = number.reduce(addFn);
+function addFn(total,value){
+    return total + value;
+}
+console.log(sum)
+
+let boolOver10 = number.every(over10fn)
+console.log(boolOver10);
+boolOver10 = number.some(over10fn)
+console.log(boolOver10);
+
+let first = number.find(over10fn)
+console.log(first);
+let firstkey = number.findIndex(over10fn);
+console.log(firstkey);
+
+const alphaber = Array.from("ABCDEF");
+console.log(alphaber);
